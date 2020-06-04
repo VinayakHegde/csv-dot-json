@@ -1,0 +1,50 @@
+{
+  "name": "csv-dot-json",
+  "version": "0.0.1",
+  "description": "CSV to JSON convertor",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "csv",
+    "json",
+    "csv2json",
+    "csv-to-json",
+    "json-convertor",
+    "convertor",
+    "csv-dot-json",
+    "dot-json"
+  ],
+  "author": "Vinayak Hegde",
+  "license": "ISC",
+  "homepage": "https://github.com/VinayakHegde/csv-dot-json#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinayakHegde/csv-dot-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VinayakHegde/csv-dot-json/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.3"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
